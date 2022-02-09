@@ -1,0 +1,23 @@
+<% if object.errors.any? %>
+
+  <div class="mb-8 rounded-lg bg-red-600 shadow-md py-5 px-4">
+    <div class="flex">
+      <div class="flex-shrink-0">
+        <%= heroicon "x-circle", variant: :solid, options: { class: "h-5 w-5 text-white" } %>
+      </div>
+      <div class="ml-3">
+        <h3 class="text-sm font-semibold text-white">
+          Please fix the following errors
+        </h3>
+        <div class="mt-2 text-sm text-white">
+          <ul class="list-disc pl-5 space-y-1">
+            <% object.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>

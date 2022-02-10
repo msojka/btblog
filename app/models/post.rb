@@ -1,7 +1,7 @@
 class Post < ActiveResource::Base
   self.include_format_in_path = false
   self.include_root_in_json = true
-  self.site = "http://localhost:4000"
+  self.site = "https://peaceful-depths-00196.herokuapp.com/"
 
   has_many :comments
 

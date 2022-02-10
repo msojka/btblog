@@ -1,4 +1,15 @@
-== link_to 'New post', new_post_path
+.w-full.flex.justify-between.items-start.space-x-8.pb-4.border-b-2.divide-gray-200
+  div
+    h2.text-3xl.tracking-tight.font-extrabold.text-gray-900.sm:text-4xl
+      | Bluethumb Blog
+    .mt-3.sm:mt-4
+      p.text-xl.text-gray-500
+        | Art facts, trends, news, interviews, curated lists & more, from the Home of Australian Artists. Sign up to receive a weekly dose in your inbox.
+  div.pt-2.lg:pt-3
+    == link_to new_post_path, class: "flex space-x-1 items-center whitespace-nowrap text-gray-500 hover:underline" do
+      == heroicon "plus", variant: :solid, options: { class: "h-5 w-5 text-indigo-600" }
+      span New post
+    
 
-.mt-8.space-y-8
+.mt-8.grid.gap-16.lg:grid-cols-2.lg:gap-x-12.lg:gap-y-12
   == render @posts

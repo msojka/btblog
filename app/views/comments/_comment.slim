@@ -1,5 +1,6 @@
-.prose
-  .font-bold
-    == comment.name
+.prose.lg:prose-lg.mx-auto.border.border-gray-200.p-6.pb-0.rounded-xl
+  .w-full.lg:flex.lg:space-x-4.lg:items-center.lg:justify-between
+    .font-bold == comment.name
+    time.text-gray-500.text-sm == Date.parse(@post.created_at).to_formatted_s(:long)
   div
     == simple_format comment.body

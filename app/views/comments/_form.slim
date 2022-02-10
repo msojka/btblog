@@ -1,8 +1,9 @@
-== form_for [@post, @comment] do |f|
+== form_for [@post, @comment], html: { class: 'space-y-6' } do |f|
 
   == render 'shared/form_errors', object: f.object
 
-  == f.text_field :name, placeholder: 'You name'  
+  == f.text_field :name, placeholder: 'Your name'  
   == f.text_area :body, placeholder: 'Write your comment here...'
   
-  == f.submit
+  .flex.items-center.justify-center
+    == f.submit

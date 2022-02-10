@@ -3,6 +3,7 @@
   == render 'shared/form_errors', object: f.object
 
   == f.text_field :title, placeholder: 'Post title', class: 'text-lg font-semibold'
-  == f.text_area :body, placeholder: 'Write your post here...'
+  == f.text_area :body, placeholder: 'Write your post here...', class: 'h-56'
 
-  == f.submit
+  .flex.items-center.justify-center
+    == f.submit

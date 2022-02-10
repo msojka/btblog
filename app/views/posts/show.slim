@@ -8,7 +8,7 @@
       == @post.title
     .mt-3.sm:mt-4
       p.text-xl.text-gray-500
-        comm
+        time == Date.parse(@post.created_at).to_formatted_s(:long)
   div.pt-2.lg:pt-3
     == link_to edit_post_path, class: "flex space-x-1 items-center whitespace-nowrap text-gray-500 hover:underline" do
       == heroicon "pencil", variant: :solid, options: { class: "h-5 w-5 text-indigo-600" }

@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
 
   # POST /posts/1/comments
   def create
-    @comment = Comment.new(comment_params. merge({post_id: @post.id}))
+    @comment = Comment.new(comment_params.merge({post_id: @post.id}))
 
     respond_to do |format|
       if @comment.save
